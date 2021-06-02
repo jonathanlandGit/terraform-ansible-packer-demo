@@ -38,9 +38,7 @@ Go in folder terraform, run command:
 
 3. terraform apply
 
-### NOTE
-
-Go in folder terraform, run command: 
+### Additional notes 
 
 1. When in networkTerraform you need to generate key-pairs:  ssh-keygen -f publicKey (if you change this name, you need to change this in TF files also where that is specified)
 
