@@ -4,11 +4,35 @@ This is a demo using ansible code for provisioning a static website using nginx 
 
 ## Getting Started
 
-Step 1: Setup a network using Terraform
+Step 1: Install needed software
 
-Step 2: Create AMI using packer and ansible inside the above-created network
+```
+Install Homebrew 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew --version //verify
+```
 
-Step 3: Setup EC2 instance inside the network with packer AMI
+```
+Install Terraform (using Homebrew)
+brew install terraform
+terraform --version //now verify installed
+```
+```
+Install Packer (using Homebrew)
+brew install packer
+packer --version //verify
+```
+```
+Install Ansible 
+sudo yum install ansible
+ansible --version //verify
+```
+
+Step 2: Setup a network using Terraform
+
+Step 3: Create AMI using packer and ansible inside the above-created network
+
+Step 4: Setup EC2 instance inside the network with packer AMI
 
 Provide access key and token in Terraform and Packer code.
 
@@ -16,31 +40,31 @@ Provide access key and token in Terraform and Packer code.
 
 Go in folder networkTerraform, run command: 
 
-1. terraform init
+1. `terraform init`
 
-2. terraform plan
+2. `terraform plan`
 
-3. terraform apply
+3. `terraform apply`
 
 ### Command to run Packer
 
 Provide subnet id created in network terraform in packer.json
 
-packer build packer.json
+`packer build packer.json`
 
 ### Command to run main Terraform
 
 Go in folder terraform, run command: 
 
-1. terraform init
+1. `terraform init`
 
-2. terraform plan
+2. `terraform plan`
 
-3. terraform apply
+3. `terraform apply`
 
 ### Additional notes 
 
-1. When in networkTerraform you need to generate key-pairs:  ssh-keygen -f keyPair (if you change this name, you need to change this in TF files also where that is specified)
+1. When in networkTerraform you need to generate key-pairs:  `ssh-keygen -f keyPair` (if you change this name, you need to change this in TF files also where that is specified)
 
 2. Be sure to include subnet_id in packer.json when this is returned after running terraform apply in networkTerraform
 
