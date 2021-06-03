@@ -6,7 +6,7 @@
     "ssh_username": "ec2-user",
     "base_ami": "ami-0d5eff06f840b45e9",
     "instance_type": "t2.micro",
-    "subnet_id": "subnet-030dca02848b271a9"
+    "subnet_id": "subnet-0b1ef63cc99cda15b"
   },
   "builders": [
     {
@@ -28,6 +28,7 @@
   "provisioners": [
     {
       "type": "ansible",
+      "user": "ec2-user",
       "playbook_file": "../ansible/playbook.yml"
     }
   ]

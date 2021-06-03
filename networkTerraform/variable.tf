@@ -32,9 +32,9 @@ variable "environment_tag" {
 # }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "publicKey"
+  default = "keyPair"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "publicKey.pub"
+  default = "keyPair.pub"
 }

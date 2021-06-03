@@ -3,6 +3,7 @@
 */terraform.tfstate.backup
 */.terraform
 */publicKey*
+*/keyPair*
 
 #  Local .terraform directories
 **/.terraform/*

@@ -5,5 +5,5 @@ output "public_subnets" {
   value = ["${aws_subnet.subnet_public.id}"]
 }
 output "ec2keyName" {
-  value = aws_key_pair.publicKey.key_name
+  value = aws_key_pair.keyPair.key_name
 }

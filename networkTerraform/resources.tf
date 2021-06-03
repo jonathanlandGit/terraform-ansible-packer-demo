@@ -50,7 +50,7 @@ resource "aws_route_table_association" "rta_subnet_public" {
   route_table_id = aws_route_table.rtb_public.id
 }
 
-resource "aws_key_pair" "publicKey" {
-  key_name   = "publicKey"
+resource "aws_key_pair" "keyPair" {
+  key_name   = "keyPair"
   public_key = file(var.PATH_TO_PUBLIC_KEY)
 }

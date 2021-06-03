@@ -40,7 +40,7 @@ Go in folder terraform, run command:
 
 ### Additional notes 
 
-1. When in networkTerraform you need to generate key-pairs:  ssh-keygen -f publicKey (if you change this name, you need to change this in TF files also where that is specified)
+1. When in networkTerraform you need to generate key-pairs:  ssh-keygen -f keyPair (if you change this name, you need to change this in TF files also where that is specified)
 
 2. Be sure to include subnet_id in packer.json when this is returned after running terraform apply in networkTerraform
 
